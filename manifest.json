@@ -1,0 +1,20 @@
+{
+  "name": "Tf2 stuff",
+  "version": "1.0.0",
+  "description": "make stats go brr",
+  "manifest_version": 3,
+  "author": "yomama",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "lmfao"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://logs.tf/*", "https://logs.tf/*"],
+      "all_frames": true,
+      "js": ["script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["storage"]
+}
